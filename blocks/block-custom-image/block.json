@@ -1,0 +1,23 @@
+{
+    "name": "acf/custom-image",
+    "title": "DD-Custom Image (ACF Block)",
+    "description": "Image, optional Clip-path animated on scroll",
+    "category": "formatting",
+    "icon": "<svg viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'><path d='M.55 0 0 .62v1.49L1.88 0H.55zM2 2h.93l1.78-2H3.38L0 3.8v1.49l2-2.25V2zM5.76 2l1.77-2H6.21L4.43 2h1.33zM2 4.73 0 6.98v1.49l2-2.25V4.73zM8.58 2l1.78-2H9.03L7.26 2h1.32zM2 14.28l-2 2.25v1.49l2-2.25v-1.49zM2 17.46l-2 2.25v1.5l2-2.25v-1.5zM2 7.91l-2 2.25v1.5l2-2.25v-1.5zM2 11.1l-2 2.25v1.49l2-2.25V11.1zM17.07 2l1.78-2h-1.33l-1.78 2h1.33zM31.21 2l1.78-2h-1.33l-1.78 2h1.33zM28.38 2l1.78-2h-1.33l-1.77 2h1.32zM25.55 2l1.78-2H26l-1.77 2h1.32zM34 2v.05L35.82 0h-1.33l-1.78 2H34zM2 20.64l-2 2.25v1.5l2-2.25v-1.5zM14.24 2l1.78-2h-1.33l-1.78 2h1.33zM11.41 2l1.78-2h-1.33l-1.77 2h1.32zM19.9 2l1.78-2h-1.33l-1.78 2h1.33zM22.73 2l1.77-2h-1.32L21.4 2h1.33zM6.61 25l-1.78 2h1.33l1.78-2H6.61zM34 21.33l2-2.25v-1.49l-2 2.25v1.49zM34 17.96l2-2.25v-1.5l-2 2.25v1.5zM34 24.71l2-2.25v-1.5l-2 2.25v1.5zM34.96 27 36 25.83v-1.49L33.63 27h1.33zM34 3.73v1.5l2-2.25v-1.5l-2 2.25zM32.41 25l-1.78 2h1.33l1.78-2h-1.33zM34 8.41l2-2.25V4.67l-2 2.25v1.49zM34 14.77l2-2.25v-1.49l-2 2.25v1.49zM34 11.59l2-2.25V7.85l-2 2.25v1.49zM2 25v-1.18l-2 2.25V27h.5l1.78-2H2zM12.27 25l-1.78 2h1.33l1.78-2h-1.33zM15.1 25l-1.78 2h1.33l1.77-2H15.1zM29.41 25l-1.78 2h1.33l1.78-2h-1.33zM9.44 25l-1.78 2h1.33l1.78-2H9.44zM3.78 25 2 27h1.33l1.78-2H3.78zM23.58 25l-1.78 2h1.33l1.78-2h-1.33zM17.92 25l-1.77 2h1.33l1.77-2h-1.33zM26.41 25l-1.78 2h1.33l1.78-2h-1.33zM20.75 25l-1.78 2h1.33l1.78-2h-1.33zM4 23h28V4H4v19ZM6 6h24v15H6V6ZM19.56 15.74 14.5 9 7 19h21l-5.5-7-2.94 3.74z'/><circle cx='26' cy='10' r='2'/></svg>",
+    "keywords": ["custom-image", "custom image"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "supports": {
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "anchor": true,
+        "jsx": true,
+        "align": true
+    },
+    "align": "full"
+}

@@ -1,0 +1,37 @@
+.dl-checkout-form {
+
+    h3 {}
+    .dl-payment-methods {
+        display: flex;
+        gap: var(--gap);
+        flex-direction: column;
+        @include mq(mq-land) {
+            flex-direction: row;
+        }
+        .dl-payment-method {
+            input[type="radio"] {}
+            .dl-payment-method-label {}
+            strong {}
+            span {}
+        }
+    }
+    .dl-checkout-actions {
+        button[type="submit"] {}
+        .dl-btn, {}
+        .dl-btn-primary {}
+        .dl-btn-large {}
+        .dl-checkout-messages {}
+    }
+}
+
+
+.dashicons-cart {
+    &::before {
+        background: transparent;
+        content: "";
+        width: 100%;
+        display: block;
+        height: 100%;
+        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%23fff' d='M0 2.006h4.286V3.72H0z'/%3E%3Cpath fill='%23fff' d='M4.343 2L6.38 7.26l-1.6.62-2.036-5.261zM15.714 5.434H20V7.15h-4.286z'/%3E%3Cpath fill='%23fff' d='M3.833 5.434h16.025l-3.39 7.429H6.572zM9.429 16.72a1.857 1.857 0 11-3.715 0 1.857 1.857 0 013.715 0M17.143 16.72a1.857 1.857 0 11-3.715 0 1.857 1.857 0 013.715 0'/%3E%3C/svg%3E") 50% no-repeat;
+    }
+}

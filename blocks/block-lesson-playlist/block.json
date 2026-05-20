@@ -1,0 +1,16 @@
+{
+    "name": "acf/lesson-playlist",
+    "title": "LKBA Lessons Playlist (ACF Block)",
+    "description": "A custom Playlist block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["playlist", "hudba"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}

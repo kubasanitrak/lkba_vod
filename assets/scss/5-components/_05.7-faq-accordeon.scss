@@ -1,0 +1,233 @@
+.accord-item {
+    position: relative;
+    // border-top: $line-THICK solid var(--LKBA-cream-dark);
+    border-bottom: $line-THICK solid var(--LKBA-cream-dark);
+    &:last-of-type {
+    }
+    &--header {
+        padding-block: calc(var(--gap) * 1.0);
+        @include mq(mq-land) {
+            
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;     
+    }
+    &--header,
+    &--content {
+
+    }
+    &--content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // gap: calc(var(--fscreen-T) * 3.2);
+        gap: var(--gap);
+
+        @include mq(mq-land) {
+            // flex-direction: row;
+            // justify-content: space-between;
+        }
+        // p {
+        //     font-size: $fz-PLAIN;
+        // }
+    }
+    &--title {
+        // padding-top: .15em;
+    }
+   
+    &--switch {}
+    
+}
+
+.accord-item--switch {
+    display: block;
+    @include mq(mq-land) {
+    }
+    overflow: hidden;
+    font-size: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc((var(--gap) * 2) + (#{$fz-H5} * .65));
+
+    @include mq(mq-land) {
+        height: calc((var(--gap) * 2) + (#{$fz-H5} * 1.2));
+    }
+
+    z-index: 10;
+    .circ {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        border-radius: 50%;
+        @include mq(mq-land) {
+            // right: var(--pad-R);
+            // top: calc((var(--fscreen-T) * 1.65) + (var(--ham-W) * .25));
+        }
+
+        width: var(--ham-W);
+        height: var(--ham-W);
+// background: lime;
+        z-index: 1;
+        
+    }
+}
+
+.accord-item--input {
+    display: none;
+    & ~ .accord-item--switch ~ .accord-item--content {
+        overflow: hidden;
+        max-height: 0;
+        padding-bottom: 0;
+        transition: 
+            max-height #{$global-transistion-duration * 0.75} 0.0s ease-in-out,
+            padding-bottom #{$global-transistion-duration * 1.25} 0.0s ease-in-out;
+        @include mq(mq-land) {
+        }
+    }
+    &:checked ~ .accord-item--switch ~ .accord-item--content {
+        max-height: 200dvh;
+        transition-duration: #{$global-transistion-duration * 1.25} #{$global-transistion-duration * 1.0};
+        padding-bottom: calc(var(--pad-T) * 1.0);
+        @include mq(mq-land) {
+            max-height: 50dvh;
+        }
+    }
+    &:checked ~ .accord-item--switch {
+        .btn-icon--bar_H {
+            &::before, 
+            &::after {
+                transform: translateX(calc(var(--cross-S) * .075 * var(--cross-int)));
+            }
+        }
+        .btn-icon--bar_V {
+// background-color: pink;
+            &::before, 
+            &::after {
+                transform: scaleX(0.001);
+            }
+        }
+    }
+}
+.btn-icon {
+    --cross-S: 30px;
+    --cross-int: 1;
+    @include mq(mq-land) {
+        --cross-S: 28px;
+    }
+    &--plus,
+    &--cross {
+        width: var(--cross-S);
+        height: var(--cross-S);
+        padding: 6px;
+    }
+    &--plus {
+        cursor: pointer;
+        position: absolute;
+        // top: calc(50% - (var(--cross-S) * .015));
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc( var(--cross-S) * -.1);
+        z-index: 10;
+        @include mq(mq-land) {
+            right: 0;
+            // right: calc(var(--pad-R) - ((var(--cross-S) - var(--ham-W)) * .5));
+            // top: calc((var(--fscreen-T) * 1.65) + (var(--ham-W) * .25));
+        }
+    }
+    &--cross {
+        transform: rotate(-45deg);
+    }
+    &--inner {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        .btn-icon--bar {
+            width: 100%;
+            height: 0;
+            padding-bottom: 11%;
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 0;
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 50%;
+                height: $plus-THICK;
+                transform: scaleX(1.0);
+                transition: 
+                    transform 250ms 0.0s ease-in-out;
+                background-color: var(--black);
+            }
+            &::before {
+                left: 0;
+                transform-origin: center right;
+            }
+            &::after {
+                right: 0;
+                transform-origin: center left;
+                --cross-int: -1;
+            }
+            &_H {
+                transform: translate(0, -50%);
+            }
+            &_V {
+                transform: translate(0, -50%) rotate(90deg);
+            }
+        }
+        
+        @include mq(mq-land) {
+        }
+    }
+}
+.accord-item--switch,
+.btn-icon {
+    cursor: pointer;
+    &:hover {
+        .btn-icon--bar {
+            &::before, 
+            &::after {
+                transform: translateX(calc(var(--cross-S) * .075 * var(--cross-int)));
+            }
+        }
+    }
+}
+// .accord-item--switch {
+//     &:hover {
+//         .btn-icon--bar {
+//             &::before {
+//             }
+//             &::after {
+//             }
+//         }
+//     }
+// }
+
+// .accord-item:has(.accord-item--switch:hover) {
+//     .accord-item--header {
+//     }
+// }
+// .accord-item:has(.accord-item--input:checked) {
+//     .accord-item--header {
+//     }
+//     .accord-item--switch {
+//         .btn-icon--bar {
+//             &::before {
+//             }
+//             &::after {
+//             }
+//         }
+//     }
+// }
