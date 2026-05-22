@@ -172,6 +172,23 @@
 	padding-bottom: calc(var(--pad-T) * 1.5);
 }
 
+.mar-block-E {
+	@for $i from 1 through 20 {
+		&_#{$i} {
+			margin-bottom: calc(var(--pad-T) * #{$i} * .5);
+		}
+	}
+}
+
+
+.mar-block-S {
+	@for $i from 1 through 20 {
+		&_#{$i} {
+			margin-top: calc(var(--pad-T) * #{$i} * .5);
+		}
+	}
+}
+
 .multiply {
 	mix-blend-mode: multiply;
 }

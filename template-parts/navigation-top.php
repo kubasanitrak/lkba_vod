@@ -21,7 +21,7 @@
 		<span class=""></span>
 	</label>
 
-	<?php include('logo.php'); ?>
+	<?php get_template_part( 'template-parts/logo' ); ?>
 	
 	<div class="menu top-menu">		
 		<?php

@@ -359,3 +359,44 @@
 	}
 	
 }
+
+.wp-block-button,
+.button {
+	a.wp-block-button__link,
+	a.wp-element-button {
+		transition:
+			color 0.2s 0.0s ease-out,
+			background-color 0.2s 0.0s ease-out;
+	}
+	&.is-style-filled {
+		a.wp-block-button__link,
+		a.wp-element-button {
+			background-color: hsl( var(--LKBA-green-hsl), .85 );
+			color: var(--color-bg);
+			border: $line-THICK solid hsl( var(--LKBA-green-hsl), 1 );
+		}
+		&:hover,
+		&:focus,
+		&:focus-within {
+			a.wp-block-button__link,
+			a.wp-element-button {
+				background-color: hsl( var(--LKBA-green-hsl), 1 );
+			}
+		}
+	}
+	&.is-style-outline {
+		a.wp-block-button__link,
+		a.wp-element-button {
+				border: $line-THICK solid hsl( var(--LKBA-green-hsl), 1 );
+		}
+		&:hover,
+		&:focus,
+		&:focus-within {
+			a.wp-block-button__link,
+			a.wp-element-button {
+				border: $line-THICK solid hsl( var(--LKBA-green-hsl), 1 );
+				background-color: hsl( var(--LKBA-green-hsl), 1 );
+			}
+		}
+	}
+}

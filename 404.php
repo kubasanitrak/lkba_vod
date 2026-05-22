@@ -1,20 +1,11 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
-<style>
-	html, body { scroll-behavior: smooth; }
-</style>
+<div class="section section-content in-view">
+	<h2 class="oops error404"><?php esc_html_e( 'Ale to je nepříjemné.', 'lkba_vod' ); ?></h2>
+	<p><?php esc_html_e( 'Pro tuto adresu není na těchto stránkách žádný obsah. Prosím zkuste některý z odkazů v hlavním menu.', 'lkba_vod' ); ?></p>
+</div>
 
-
-		<div class="section section-content in-view">
-
-<!-- PAGE CONTENT -->
-<!-- h2.oops.error404 -->
-		<h2 class="oops error404"><?php _e( 'Ale to je nepříjemné.', 'lkba_vod' ); ?></h2>
-        <p><?php _e( 'Pro tuto adresu není na těchto stránkách žádný obsah. Prosím zkuste některý z odkazů v hlavním menu.', 'lkba_vod' ); ?></p>
-		
-		</div>
-
-<?php get_footer(); ?>
-
-</body>
-</html>
+<?php
+get_footer();

@@ -125,7 +125,7 @@
 	// padding: 0 calc(#{$line-THICK} * 2) 0 $line-THICK;
 	& > .wp-block-group * + *,
 	& > * + * {
-		&:not(.quantity-button):not(.grid-item):not(.lesson-value--item):not(.lesson-value--item .checkmark):not(.line-top):not(.customtable):not(.customtable-col):not(.map-container):not(.mar-T-0):not(.mar-T):not(.menu-item):not(.wp-block-navigation-item):not(.workshop-terms--item):not(.workshop-terms--item_caption):not(.workshop-terms--item_place):not(br):not(.list-grid--lessons):not(.wp-block-buttons .wp-block-button) {
+		&:not(.dl-form-row):not(.dl-form-col):not(.dl-form-col input):not(.quantity-button):not(.grid-item):not(.lesson-value--item):not(.lesson-value--item .checkmark):not(.line-top):not(.customtable):not(.customtable-col):not(.map-container):not(.mar-T-0):not(.mar-T):not(.menu-item):not(.wp-block-navigation-item):not(.workshop-terms--item):not(.workshop-terms--item_caption):not(.workshop-terms--item_place):not(br):not(.list-grid--lessons):not(.wp-block-buttons .wp-block-button) {
 			margin-block-start: var(--flow-space, 1em);
 	    }
 	    .scroll-trigger + .scroll-trigger {

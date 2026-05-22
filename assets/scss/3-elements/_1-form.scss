@@ -2,7 +2,7 @@ form {
 	width: 100%;
 	// background-color: red;
 
-	&:not(.search-form):not(.signup-form):not(.dl-checkout-form) {
+	&:not(.search-form):not(.signup-form):not(.dl-checkout-form):not(.dl-form) {
 
 		> div {
 			position: relative;

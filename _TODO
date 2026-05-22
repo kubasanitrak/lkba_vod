@@ -1,0 +1,556 @@
+CSS
+- zvýraznit link "Souhlasím s obchodními podmínkami…"
+- učesat dl-payment result page:
+<div class="dl-payment-result dl-payment-success">
+    <div class="dl-result-icon">
+        <span class="dashicons dashicons-yes-alt"></span>
+    </div>
+    
+    <h2>Platba byla úspěšná!</h2>
+    
+    <p>Děkujeme za váš nákup. Nyní máte přístup k vašim lekcím.</p>
+    
+            <div class="dl-order-details">
+            <h3>Podrobnosti objednávky</h3>
+            <p><strong>Číslo objednávky:</strong> DL-118FE49B</p>
+            <p><strong>Celkem:</strong> 19,99 Kč</p>
+            
+            <h4>Zakoupené lekce:</h4>
+            <ul>
+                                    <li>
+                        <a href="https://video.barreacademy.cz/lesson/sila-vlastni-vahy/">
+                            Síla vlastní váhy                        </a>
+                    </li>
+                            </ul>
+        </div>
+        
+    <div class="dl-result-actions">
+        <a href="https://video.barreacademy.cz/dashboard/" class="dl-btn dl-btn-primary">
+            Přejít na mé lekce        </a>
+    </div>
+</div>
+
+- add Stripe live keys
+
+
+[x] add admin tab for displaying invoices overview (developer-lessons plugin → Lessons → Invoices)
+
+
+
+
+
+NEEDs CSS styling:
+<div class="dl-invoice-profile-form">
+            <h3>Fakturační údaje</h3>
+            <p class="dl-form-description">Tyto údaje budou použity, když si při pokladně vyžádáte fakturu.</p>
+            
+            <form id="dl-invoice-profile-form" class="dl-form">
+                <div class="dl-form-row">
+                    <label for="dl_profile_company_name">Název společnosti</label>
+                    <input type="text" name="company_name" id="dl_profile_company_name" value="">
+                </div>
+
+                <div class="dl-form-row dl-form-row-half">
+                    <div class="dl-form-col">
+                        <label for="dl_profile_street">Ulice</label>
+                        <input type="text" name="street" id="dl_profile_street" value="">
+                    </div>
+                    <div class="dl-form-col dl-form-col-small">
+                        <label for="dl_profile_street_number">Číslo</label>
+                        <input type="text" name="street_number" id="dl_profile_street_number" value="">
+                    </div>
+                </div>
+
+                <div class="dl-form-row dl-form-row-half">
+                    <div class="dl-form-col dl-form-col-small">
+                        <label for="dl_profile_zip">PSČ</label>
+                        <input type="text" name="zip" id="dl_profile_zip" value="">
+                    </div>
+                    <div class="dl-form-col">
+                        <label for="dl_profile_city">Město</label>
+                        <input type="text" name="city" id="dl_profile_city" value="">
+                    </div>
+                </div>
+
+                <div class="dl-form-row dl-form-row-half">
+                    <div class="dl-form-col">
+                        <label for="dl_profile_ic">IČ</label>
+                        <input type="text" name="ic" id="dl_profile_ic" value="" placeholder="např. 12345678">
+                    </div>
+                    <div class="dl-form-col">
+                        <label for="dl_profile_dic">DIČ</label>
+                        <input type="text" name="dic" id="dl_profile_dic" value="" placeholder="např. CZ12345678">
+                        <p class="dl-field-hint">Ponechte prázdné, pokud nejste plátce DPH</p>
+                    </div>
+                </div>
+
+                <div class="dl-form-actions">
+                    <button type="submit" class="dl-btn dl-btn-primary" id="dl-save-invoice-profile">
+                        Uložit fakturační údaje                    </button>
+                    <span class="dl-form-message" id="dl-invoice-message"></span>
+                </div>
+            </form>
+        </div>
+
+
+
+TODO list pro videolekce barre
+
+										platba přes produkty Reservio
+										- možná jsem to nějak špatně pochopil, ale tuhle cestu nějak nevidím - v Reserviu můžeme založit nějaký simple "Product" (s názvem, cenou a fotkou). 
+										Neumíme ale zadat množstevní slevu, v případě "balíčku" 5ti ovlivnit, kterých 5 si předplácíme
+										A cesta z objednávky předplatného na webu video.barreacademy na stránku Reservio Products by znamenala, že si výběr musíme znova naklikat na stránce Reservia… I mně to přijde složité, myslím že to povede k jedinému - ztratíme zákazníky před platbou.
+
+platba převodem / QR platba
+										- při objdenávce vystavená proforma faktura + stav "pending" 
+										- po přijetí platby změna stavu lekce na "předplacená" + automatické vystavení a odeslání faktury - zákaznický a administrátorský e-mail
+- doplnit pokyny k platbě - pro co nejrychlejší potvrzení objednávky svých lekcí zašlete potvrzení o platbě na email: objednavky@barreacademy.cz
+
+platba kartou - Stripe
+- pokusím se během dnes a zítra nasadit platbu přes Stripe - jsou tam sice vyšší poplatky za transakci (%) ale jako přechodné řešení to stačí, účet u Stripe pro LK Barre je zřízený už z dřívějška
+
+otestovat (Mobil, tablet, desktop)
+- množstevní sleva
+- přístup k lekcím po odhlášení přihlášení
+- objednávka 1 lekce
+- objednávka 5ti lekcí
+- objednávka všech lekcí
+- registrace
+- přihlášení
+
+upravit ceny na skutečné
+- cz
+- en
+
+poslední test a ostrý provoz
+
+platba kartou s minimálními poplatky
+- odloženo do zprovoznění GoPay/Comgate pro LK Barre Lab
+
+
+					Update Spotify playlists
+					kotníková závaží
+					https://open.spotify.com/playlist/3fzYKl7gPjopNm9Fs222WU?si=d1aDAzaST423voVFBTC2Sw&pi=TmXNJRExT6yql
+					ergo činka
+					https://open.spotify.com/playlist/6bB9j57KBFeSh24WttDwGT?si=xaVolXZ1RFyqI7hCj2r5ug&pi=LDBM-fhMQmqE8
+					overball
+					https://open.spotify.com/playlist/2G7e1l92qWm4GygrE3WdAg?si=NwsDuvF-Spq8V9u2xx2c-w&pi=seivDZNaS0SXs
+					flow and slide
+					https://open.spotify.com/playlist/4HCaDQyAP5FsDd3XQpjb7H?si=9b_tqBYsSkm6zYg9sBej8w&pi=fV4m-iSKR3C4F
+					theraband
+					https://open.spotify.com/playlist/6hjN8L4k4RW6EUthDR0UyS?si=mMVksVE9QYCsJMSe_OKdGA&pi=vIQmF1EjSzeb2
+					vlastní váha
+					https://open.spotify.com/playlist/6QWV00Qg5miUqn6XJjkXpd?si=zCoCchLsQPu9JJTRZIhW5Q&pi=wdsbccitSICRY
+					činky a ladnost
+					https://open.spotify.com/playlist/2vL4JVzkRLOxrvM69MZhW5?si=kEAgCBSZT_mG0TxHJIlLiw&pi=ovBpbzutRVuMX
+					power činka a guma
+					https://open.spotify.com/playlist/68H7NSq3IqKKYufOjnsCWk?si=2oWYRCKTTP2_hotqThU0mg&pi=ebVE-K06QEC_U
+					Test Comgate
+					Real Comgate payments (ksanitrak user account credentials)
+					jogablok a činky
+					https://open.spotify.com/playlist/6MkZ1f0UskAnPzmPR8D9ZO?si=cRodD3_lSLGMM5129wJ1bA&pi=tVjDCQ3cQtGAb
+Update prices
+
+Style payment details:
+/ — / — / — / — / — / — / — / — / — / — / — / — 
+<!-- <div class="content-container"> -->
+
+<div class="section section-mar-T full-bleed">
+	<div class="flow layout-grid">
+        <div class="dl-bank-transfer-info">
+            <h2>Platba bankovním převodem</h2>
+            
+            <div class="dl-order-summary">
+                <p><strong>Číslo objednávky:</strong> DL-E71C7666</p>
+                <p><strong>Částka:</strong> 1,90 Kč</p>
+            </div>
+
+            <div class="dl-bank-details">
+                <h3>Údaje o bankovním účtu</h3>
+                
+                <table class="dl-bank-details-table">
+                                        <tbody><tr>
+                        <th>Název účtu:</th>
+                        <td>Lesson Account Name</td>
+                    </tr>
+                                        <tr>
+                        <th>Číslo účtu:</th>
+                        <td><strong>1517860032/3030</strong></td>
+                    </tr>
+                                        <tr>
+                        <th>IBAN:</th>
+                        <td>CZ56 3030 0000 0015 1786 0032</td>
+                    </tr>
+                                                            <tr>
+                        <th>BIC/SWIFT:</th>
+                        <td>AIRACZPP</td>
+                    </tr>
+                                        <tr>
+                        <th>Částka:</th>
+                        <td><strong>1,90 Kč</strong></td>
+                    </tr>
+                    <tr>
+                        <th>Variabilní symbol:</th>
+                        <td><strong class="dl-variable-symbol">717666</strong></td>
+                    </tr>
+                </tbody></table>
+            </div>
+
+                        <div class="dl-qr-payment">
+                <h3>Zaplatit pomocí QR kódu</h3>
+                <p>Naskenujte tento QR kód vaší bankovní aplikací pro okamžitou platbu:</p>
+                <div class="dl-qr-code">
+                    <img fetchpriority="high" decoding="async" src="https://api.paylibo.com/paylibo/generator/czech/image?accountNumber=1517860032&amp;bankCode=3030&amp;amount=1.90&amp;currency=CZK&amp;size=250&amp;vs=717666&amp;message=Objednavka%20DL-E71C7666" alt="Platební QR kód" width="250" height="250">
+                </div>
+                <p class="dl-qr-hint">Funguje se všemi českými bankovními aplikacemi</p>
+            </div>
+            
+            <div class="dl-payment-notes">
+                <h4>Důležité informace</h4>
+                <ul>
+                    <li>Vaše objednávka bude dokončena po obdržení platby.</li>
+                    <li>Zpracování platby obvykle trvá 1-2 pracovní dny.</li>
+                    <li><strong>Vždy použijte variabilní symbol pro vaši platbu!</strong></li>
+                </ul>
+            </div>
+
+            <div class="dl-payment-actions">
+                                <a href="http://localhost:8888/vod/dashboard/" class="dl-btn">
+                    Přejít na mé lekce                </a>
+            </div>
+        </div>
+        
+	</div>
+</div>
+/ — / — / — / — / — / — / — / — / — / — / — / — 
+
+				Ok for context updated repo uploaded here: https://github.com/kubasanitrak/developer-lessons.git
+
+				Issue #1 - use of "[dl_lessons_grid]"
+				Lesson item button(add to cart) - item in list of available lessons, on lesson detail page, is updated when item is added to basket - ok. 
+				But when item is removed from basket, button does not update back, item cannot be re-added to basket again.
+				Desired behaviour: update button when item is removed from basket and enable to add it to basket after removed.
+
+				Issue #2 - checkout page - unable to complete order
+				On form submit, with every required field filled properly, I see error message 'Failed to create order.' for card-payment method and/or bank transfer
+
+https://yoursite.com/?dl_fix_db=1
+
+
+
+
+https://barreacademy.reservio.com/barreacademy-holesovice/events
+https://barreacademy.reservio.com/barreacademy-vrsovice/events
+
+
+
+[dl_lessons_grid]
+[dl_lessons_grid count="10" exclude_current="false" exclude_purchased="false"]
+
+section section-lesson_grid full-bleed scroll-trigger scroll-trigger--grid
+
+
+
+LK Barre Prague
+222463393/5500
+IČ	22246339
+Kaprova 40/12, 11000 Praha, CZ
+
+
+
+
+
+ComGate
+Identifikátor propojení obchodu	
+509967
+Heslo
+288d2ffa01e1d4debd13ec2af4b50edc
+MID
+G1054467
+
+Na kovárně 461/10
+101 00 Praha 10
+
+a čas je 11:00 - 17:00
+				Často kladené otázky (FAQ) – Barre Academy Online
+
+				Zde najdete vše, co potřebujete vědět o našem online video archivu. Pokud by vám přesto něco chybělo, neváhejte nás kontaktovat.
+
+				1. Kolik lekcí si mohu koupit a jaké jsou možnosti?
+				Připravily jsme pro vás set 10 propracovaných videí. Máte naprostou svobodu v tom, jak si svůj tréninkový plán sestavíte:
+				1 video může být ideální volbou, pokud hledáte konkrétní zaměření nebo chcete mít po ruce jednu precizně sestavenou lekci, kterou si díky opakování dokonale osvojíte.
+				Balíček 5 videí je zlatou střední cestou pro ty z vás, které máte rády pestrost. Střídání pěti různých lekcí zajistí, že vaše svaly budou neustále dostávat nové podněty a cvičení vás nepřestane bavit.
+				Kompletní set 10 videí = vaše osobní barre knihovna. Získáte ucelený systém tréninků, maximální inspiraci a možnost volit lekci přesně podle toho, na co máte daný den energii a čas. Navíc za nejvýhodnější cenu.
+
+				2. Jak dlouho mi přístup k videím zůstane?
+				Věříme v udržitelnost a svobodu v pohybu. Jakmile si video (nebo balíček) zakoupíte, zůstává vám k dispozici už navždy. Cvičte tehdy, kdy se to hodí vám – ať už je to dnes, nebo za rok.
+
+				3. Pro koho jsou videa určena? Jsou vhodná i pro lektorky?
+				Naše videa jsou mostem mezi studiem a vaším domovem. Jsou tu pro klientky, které milují náš styl, ale zrovna se k nám fyzicky nedostanou – ať už jste mimo město, na dovolené, nebo doma pečujete o děti. Zároveň jsou díky vysoké odbornosti našich lektorek skvělým zdrojem inspirace pro ostatní lektorky, které hledají nové variace cviků a precizní metodiku vedení lekce.
+
+				4. Jaké vybavení budu ke cvičení potřebovat?
+				V naší knihovně najdete různorodé lekce. Máme pro vás varianty:
+				 Zcela bez pomůcek, cvičení s vlastní vahou těla, které zvládnete kdekoliv.
+				 S vybavením pro prohloubení prožitku a zvýšení intenzity. Využíváme overball, činky (včetně ergonomických), odporové gumy (latexové i látkové) či Theraband, jóga bloky, kotníkové závaží nebo slidery.
+
+				Tip: U každého videa najdete v popisku přesný seznam pomůcek, které lektorka používá.
+
+				5. Jak je to s hudbou a playlisty?
+				Atmosféra je pro nás klíčová. Ke každému videu jsme pro vás na Spotify vytvořily speciální playlist. Odkaz najdete přímo u lekce.
+				Někdy se může stát, že hudba nepokryje celou délku videa nebo je v lekci ticho. Je to záměr – v určitých pasážích chceme, abyste se maximálně soustředila na svůj dech a pokyny lektorky. Ticho v těchto momentech prohlubuje koncentraci na správnou techniku, která je v Barre Academy na prvním místě.
+
+				6. Na jakém zařízení mohu videa sledovat?
+				Náš web je plně responzivní. Pro nejlepší zážitek ze cvičení doporučujeme laptop nebo tablet, abyste dobře viděla na detaily cviků. Lekce však bez problémů přehrajete i na svém chytrém telefonu. Stačí mít stabilní internetové připojení a prostor pro sebe.
+
+				7. Co když nebudu se zakoupeným videem spokojená?
+				V Barre Academy si zakládáme na špičkové kvalitě, kterou denně zažíváte v našem studiu. Vzhledem k tomu, že se jedná o digitální produkt, po zaplacení a zpřístupnění (spuštění) videa již dle platné legislativy i našich obchodních podmínek není možné nárokovat vrácení peněz. Jsme si však jisté, že díky profesionalitě našich lektorek a kvalitě zpracování budete z každé minuty cvičení nadšená.
+
+
+				FAQ Barre Academy Online
+				Here you will find everything you need to know about our online video archive. If you still miss anything, don’t hesitate to contact us.
+				1. How many lessons can I purchase and what are the options?
+				We have prepared a set of 10 carefully designed videos for you. You have complete freedom in how you structure your training plan:
+				1 video can be the ideal choice if you are looking for a specific focus or want to have one precisely designed lesson at hand that you can master perfectly through repetition.
+				A package of 5 videos is the golden middle ground for those of you who enjoy variety. Alternating between five different lessons ensures your muscles are constantly stimulated and your workouts stay engaging.
+				The complete set of 10 videos = your personal barre library. You get a comprehensive training system, maximum inspiration, and the flexibility to choose a lesson based on your energy and time each day. Plus, it comes at the best value price.
+				2. How long will I have access to the videos?
+				We believe in sustainability and freedom of movement. Once you purchase a video (or package), it is yours forever. Exercise whenever it suits you—whether that’s today or a year from now.
+				3. Who are the videos for? Are they suitable for instructors as well?
+				Our videos are a bridge between the studio and your home. They are for clients who love our style but can’t physically attend—whether you are out of town, on vacation, or caring for children at home.
+				At the same time, thanks to the high level of expertise of our instructors, they are also a great source of inspiration for other instructors looking for new exercise variations and precise teaching methodology.
+				4. What equipment will I need?
+				Our library includes a variety of lessons. You’ll find:
+				No-equipment options, using only your body weight—perfect for anywhere.
+				Equipment-based workouts to deepen the experience and increase intensity. We use an overball, dumbbells (including ergonomic ones), resistance bands (latex and fabric) or Theraband, yoga blocks, ankle weights, or sliders.
+				Tip: Each video description includes an exact list of equipment used by the instructor.
+				5. What about music and playlists?
+				Atmosphere is key for us. For each video, we’ve created a special Spotify playlist for you. You’ll find the link directly with the lesson.
+				Sometimes the music may not cover the entire video or there may be silence during parts of the lesson. This is intentional—in certain sections, we want you to fully focus on your breathing and the instructor’s guidance. Silence in these moments deepens your concentration on proper technique, which is our top priority at Barre Academy.
+				6. On which devices can I watch the videos?
+				Our website is fully responsive. For the best workout experience, we recommend a laptop or tablet so you can clearly see exercise details. However, you can also play the lessons without any issues on your smartphone. All you need is a stable internet connection and space for yourself.
+				7. What if I’m not satisfied with the purchased video?
+				At Barre Academy, we pride ourselves on top-quality standards that you experience daily in our studio. As this is a digital product, once it has been paid for and accessed (played), refunds cannot be claimed in accordance with applicable legislation and our terms and conditions.
+				However, we are confident that thanks to the professionalism of our instructors and the quality of production, you will be delighted with every minute of your workout.
+
+
+
+
+
+<p class="plain">Hledáte Barre lekce, které vás opravdu&nbsp;posunou?<br>10 profesionálně sestavených lekcí připravených tak, aby fungovaly pro&nbsp;každého.<br>Ať cvičíte doma, nebo hledáte inspiraci pro vlastní&nbsp;výuku.<br>Jsem přesvědčená, že dobrá lekce se pozná okamžitě!</p>
+<p class="plain">Každá lekce trvá 50-60 minut, ke každé dostanete popis i&nbsp;playlist.<br>Každá lekce má své téma – overball, gumy, činky nebo jen vlastní váha, žádná lekce se neopakuje!</p>
+<p class="plain">Jste lektorka a&nbsp;hledáte nové kombinace? Tady je najdete – s&nbsp;popisem, strukturou i&nbsp;playlistem. Ušetříme vám 6&nbsp;měsíců&nbsp;práce.</p>
+<p class="plain">Cvičíte doma a&nbsp;chcete si dát pořádný&nbsp;trénink? Pusťte&nbsp;si lekci a&nbsp;cvičte podle mě od A&nbsp;do&nbsp;Z.</p>
+<p class="plain">Platíte jednou – sledujete&nbsp;neomezeně.</p>
+
+
+for context - updated repo to be found here:
+https://github.com/kubasanitrak/developer-lessons.git
+proceed with following:
+
+1. update teaser content on cpt(lesson) detail page:
+- display all other available cpts (lessons) with button to "add to basket"
+- in grid container(CSS class "list-grid list-grid--lessons") - with following markup:
+- for img, use custom-field (lesson_tile_img_id) - this field is already created with ACF PRO plugin, connected to CPT and used in custom wp theme elsewhere. 
+(If we are not able to use ACF field in plugin code, show how to create such meta field and use it in grid markup instead)
+
+	<?php
+        $POST_ID = get_the_ID();
+        $POST_TITLE = get_the_title();
+    ?>
+	<div class="grid-item" >
+		<div class="grid-item--img_container">
+            <?php
+                $IMG_ID = get_field('lesson_tile_img_id', $POST_ID); // ACF PRO field already integrated in CPT
+                if($IMG_ID) :
+                    $img_src = wp_get_attachment_image_url( $IMG_ID, 'medium' );
+                    $img_srcset = wp_get_attachment_image_srcset( $IMG_ID, 'full' );
+            ?>
+                <img class="grid-item--img lazyload" data-srcset="<?php echo esc_attr( $img_srcset ); ?>" data-src="<?php echo esc_url( $img_src ); ?>" data-sizes="auto" alt="<?php echo $POST_TITLE; ?>" title="<?php echo $POST_TITLE; ?>" >
+            <?php endif; ?>
+        </div>
+		<div class="grid-item--label"> <h4 class="grid-item--title"> <?php echo $POST_TITLE; ?> </h4> </div>
+		<a href="<?php the_permalink(); ?>" class="abs-link grid-item--title_link"></a>
+		<button type="button" class="dl-add-to-basket-btn" data-lesson-id="<?php echo esc_attr($post->ID); ?>"> <?php _e('Add to Basket', 'developer-lessons'); ?> </button>
+	</div>
+
+
+paid-content
+					1. dynamic update checkout items - when item in checkout recap is removed, price nor sale do not get updated,
+					2. on checkout(before user confirms order) add option to enter invoice credentials, if user chooses so, store these in user profile
+					3. user profile: add fields for invoice credentials - company name, company address(street, number, zip and city), IC and DIC (VAT credentials specific for Czech finances)
+
+4. generate invoice and send it as attachment with e-mail - "order confirmation and payment details"
+	- stage one - use php mailer and functionality to be found in this repo (https://github.com/kubasanitrak/email-confirm-invoice.git)
+	- stage two - Fakturoid integration - connect to fakturoid account and process invoice generation, payments confirmation(card payment) and validation with Fakturoid
+
+AI SUMMARY:
+
+    Dynamic checkout totals - When removing items from checkout, subtotal, discount, and total update automatically via AJAX without page reload.
+
+    Invoice fields at checkout - Users can optionally request an invoice by checking a box, which reveals fields for company details (IČ, DIČ, address).
+
+    User profile invoice storage - Invoice details can be saved to the user's profile and pre-filled on future checkouts.
+
+    Admin profile fields - Admins can view/edit user invoice details from the WordPress user profile.
+
+    Frontend shortcode - [dl_invoice_profile] allows users to manage their invoice details on a frontend page.
+
+
+
+
+AI prompt for mlynhrusky admin
+sortable and filterable interactive table from wp db table:
+sort by:
+- type
+- date - pick date period, last week, last month
+- item (type and id combination ?)
+- status - paid, canceled, pending…
+
+
+
+
+
+
+barreacademy.cz
+v=spf1 a: replikant3766.thinline.cz include:spf-spolehlive-servery.cz include: spf.cesky-hosting.cz include:websmtp.cesky-hosting.cz include: spf.smartemailing.cz~all
+
+sek1._domainkey
+sek1._domainkey.barreacademy.cz
+dkim.smartemailing.cz
+
+_dmarc
+_dmarc.barreacademy.cz
+V=DMARC1; p=none; rua=mailto: rezervace@barreacademy.cz,mailto:dmarc+691748@smartemailing.cz; ruf=mailto: rezervace@barreacademy.cz; fo=1
+
+
+
+Private Stater
+barreacademystats
+8T>6w~E8f!x'2Ks
+
+
+Lenka Krejčová Barre Academy
+Jankovcova 16b/1639
+170 00 Praha Holešovice
+Česká Republika
+
+studio@barreacademy.cz
++420 608 438 728
+
+IČ: 05378125
+bankovní spojení: 1517860016/ 3030
+
+https://gom-perfumes.cz/obchodni-podminky/
+
+		kontaktní e-mail a telefon
+		informace o produktu: popis, cena zboží či služeb
+		možnost provedení objednávky / nákupu / vložení zboží do košíku
+
+informace o ochraně osobních údajů obsahující název zasmluvněné společnosti, adresu dle obchodního rejstříku, IČ
+obchodní podmínky
+	všeobecné obchodní podmínky obsahující název zasmluvněné společnosti, adresu dle obchodního rejstříku, IČ
+	reklamační podmínky (vrácení zboží, peněz, storno služby)
+	dodací a platební podmínky
+
+
+video.barreacademy.cz
+
+Play Lesson
+Natalie
+You might also like
+
+
+			sign-up | sign-in
+
+
+
+				page(s)
+				forms
+				actions on form submit (jetform plugin <= youtube tutorial)
+			lkba_theme integration
+				menu
+				single.php (cpt template override)
+			vod landing page - non registered, non logged-ins
+				redirect for nonlogged-in users
+			logged-in landing page - video overview - pick one to start + buy all videos widget
+			teaser content
+			all access content 
+				- vimeo ACF block
+				- playlist
+				- video desc.
+			
+			hide wp toolbar for subscribers
+
+
+
+
+ceník VOD = Ceny video lekcí
+1 video = 1 999,-
+5 videí 8 999,-
+10 videí 17 999,-
+POZOR!
+jazykově omezeno - objednávám počet i jazyk
+
+
+custom blocks
+		1. video
+			- vimeo ID
+			- lektorka (default value)
+			- length (min.)
+		2. title - 1st & 2nd line
+3. Playlist UPDATE
+	Spotify Playlist embed (?)
+		3. Playlist
+			- text area (default value)	
+			- repeater (auto numbering list):
+				- track name
+				- track link
+		4. "more like this"
+			- custom query (pick items from lesson cpt - news block NTMd alike)
+	5. FAQ
+		- question
+		- answer <innerBlocks>
+
+Styling
+ cpt layout grid
+
+	
+vodtester1
+vod123
+
+test01@barreacademy.cz
+test1
+
+test02@barreacademy.cz
+test2
+
+
+
+DEV DB for VOD
+127.0.0.1
+barreacademycz02
+barreacademyc003
+wZScie15
+
+vodadmin
+IQF8SSoQ3C
+kuba@sanitrak.cz
+
+
+1.
+Lekce Barre s odporovou gumou: Malá pomůcka, velké výsledky!
+
+
+
+
+
+
+
+Playlist
+Temperature - Sean Paul
+Best friend feat Doja Cat
+Let’s get loud - Jenifer Lopez
+Not fair - Niklas Dee
+The tight is high - Atomic kittens
+Papaoutai - Afro sou
+https://open.spotify.com/playlist/6fIgmCqtqSiWYbAg8qPWKX?si=afcb7eee4600453a

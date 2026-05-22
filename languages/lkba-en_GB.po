@@ -36,3 +36,6 @@ msgstr "grid"
 
 msgid "Sledujte nás"
 msgstr "Follow us"
+
+msgid "Pro zobrazení svých lekcí se prosím přihlaste."
+msgstr "Please log in to view your lessons."

@@ -80,23 +80,4 @@
 				?>&nbsp;min.</strong>
 		</div>
 	</div>
-	<!-- LOAD VIMEO HELPER SCRIPT -->
-	<?php 
-	if( $VIDEO_HOST === 'vimeo_public' || $VIDEO_HOST === 'vimeo_private' ) :
-	?>
-		<!-- <link rel='stylesheet' href='<?php #echo  get_template_directory_uri(); ?>/assets/css/vimeo-lazyload.css?v30' media="all"> -->
-	<?php 
-		include ('js-lazyload-vimeo.php');
-	?>
-	<!-- LOAD YOUTUBE HELPER SCRIPT -->
-	<?php 
-	elseif( $VIDEO_HOST === 'youtube' ) :
-	?>
-		<!-- <link rel='stylesheet' href='<?php #echo  get_template_directory_uri(); ?>/assets/css/vimeo-lazyload.css?v30' media="all"> -->
-	<?php
-		include ('js-lazyload-youtube.php');
-	?>
-	<?php else : ?>
-	<!-- LOAD SELFHOSTING HELPER SCRIPT -->
-	<?php endif; ?>
 </div>

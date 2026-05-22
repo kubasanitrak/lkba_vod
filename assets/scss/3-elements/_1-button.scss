@@ -23,9 +23,13 @@ button {
 
 // .dl-add-to-basket-btn,
 // .grid-item--btn,
+.wp-block-button.is-style-outline,
 .wp-block-button.is-style-outline > .wp-block-button__link,
 .wp-block-button .wp-block-button__link.is-style-outline {
 	border-width: $line-THICK;
+}
+.wp-block-button.is-style-outline {
+		
 }
 .wp-block-button.is-style-outline > .wp-block-button__link,
 .wp-block-button .wp-block-button__link.is-style-outline {
@@ -54,6 +58,22 @@ button {
 		}
 	}
 }
+
+.wp-block-button,
+.button {
+	&.is-style-filled {
+		a.wp-block-button__link,
+		a.wp-element-button {
+
+		}
+	}
+	&.is-style-outline {
+		a.wp-block-button__link,
+		a.wp-element-button {
+			border:  $line-THICK solid hsl( var(--LKBA-green-hsl), 0.9 );
+		}
+	}
+}
 .wp-block-button__link {
   border-radius: 0 !important;
 }
@@ -73,5 +93,13 @@ button {
 		color: var(--color-bg);
 		border-color: var(--LKBA-green);
 	  background-color: hsla(var(--LKBA-green-hsl), .75);
+	}
+}
+
+.flow.layout-grid {
+	a.wp-block-button__link,
+	a.wp-element-button {
+	  width: 100%;
+	  text-align: center;
 	}
 }
