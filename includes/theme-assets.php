@@ -7,7 +7,7 @@
 
 function lkba_vod_asset_version( $relative_path ) {
 	$path = get_template_directory() . $relative_path;
-	return file_exists( $path ) ? (string) filemtime( $path ) : '1.0.4';
+	return file_exists( $path ) ? (string) filemtime( $path ) : '1.0.5';
 }
 
 function lkba_vod_enqueue_frontend_assets() {
@@ -26,13 +26,14 @@ function lkba_vod_enqueue_frontend_assets() {
 		array(),
 		lkba_vod_asset_version( '/assets/css/style.css' )
 	);
-
+	/*
 	wp_enqueue_style(
 		'lkba-vod-public',
 		$theme_uri . '/assets/css/public.css',
 		array( 'lkba-vod-style' ),
 		lkba_vod_asset_version( '/assets/css/public.css' )
 	);
+	*/
 
 	wp_enqueue_style(
 		'lkba-vod-wp-block-fix',

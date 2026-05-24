@@ -1,39 +1,49 @@
-CSS
-- zvýraznit link "Souhlasím s obchodními podmínkami…"
-- učesat dl-payment result page:
-<div class="dl-payment-result dl-payment-success">
-    <div class="dl-result-icon">
-        <span class="dashicons dashicons-yes-alt"></span>
-    </div>
-    
-    <h2>Platba byla úspěšná!</h2>
-    
-    <p>Děkujeme za váš nákup. Nyní máte přístup k vašim lekcím.</p>
-    
-            <div class="dl-order-details">
-            <h3>Podrobnosti objednávky</h3>
-            <p><strong>Číslo objednávky:</strong> DL-118FE49B</p>
-            <p><strong>Celkem:</strong> 19,99 Kč</p>
-            
-            <h4>Zakoupené lekce:</h4>
-            <ul>
-                                    <li>
-                        <a href="https://video.barreacademy.cz/lesson/sila-vlastni-vahy/">
-                            Síla vlastní váhy                        </a>
-                    </li>
-                            </ul>
-        </div>
-        
-    <div class="dl-result-actions">
-        <a href="https://video.barreacademy.cz/dashboard/" class="dl-btn dl-btn-primary">
-            Přejít na mé lekce        </a>
-    </div>
-</div>
-
-- add Stripe live keys
+Všechny lekce na výběr za&nbsp;zvýhodněnou cenu pro&nbsp;všech 10&nbsp;videí.
+Jste lektorka a&nbsp;hledáte nové kombinace? Tady je najdete – s&nbsp;popisem, strukturou i&nbsp;playlistem. Ušetříme vám 6&nbsp;měsíců&nbsp;práce.
+Cvičíte doma a&nbsp;chcete si dát pořádný&nbsp;trénink? Pusťte&nbsp;si lekci a&nbsp;cvičte podle videa od A&nbsp;do&nbsp;Z.
 
 
-[x] add admin tab for displaying invoices overview (developer-lessons plugin → Lessons → Invoices)
+All lessons to choose from at a discounted price for all 10&nbsp;videos.
+Are&nbsp;you a teacher and looking for new&nbsp;combinations? You&nbsp;can find them here - with a&nbsp;description, structure and&nbsp;playlist. We'll&nbsp;save you 6&nbsp;months of&nbsp;work.
+Doing your exercise at home and aiming for a quality&nbsp;workout? Watch&nbsp;a lesson and follow the video from A&nbsp;to&nbsp;Z.
+
+
+											CSS
+											- zvýraznit link "Souhlasím s obchodními podmínkami…"
+											- učesat dl-payment result page:
+											<div class="dl-payment-result dl-payment-success">
+											    <div class="dl-result-icon">
+											        <span class="dashicons dashicons-yes-alt"></span>
+											    </div>
+											    
+											    <h2>Platba byla úspěšná!</h2>
+											    
+											    <p>Děkujeme za váš nákup. Nyní máte přístup k vašim lekcím.</p>
+											    
+											            <div class="dl-order-details">
+											            <h3>Podrobnosti objednávky</h3>
+											            <p><strong>Číslo objednávky:</strong> DL-118FE49B</p>
+											            <p><strong>Celkem:</strong> 19,99 Kč</p>
+											            
+											            <h4>Zakoupené lekce:</h4>
+											            <ul>
+											                                    <li>
+											                        <a href="https://video.barreacademy.cz/lesson/sila-vlastni-vahy/">
+											                            Síla vlastní váhy                        </a>
+											                    </li>
+											                            </ul>
+											        </div>
+											        
+											    <div class="dl-result-actions">
+											        <a href="https://video.barreacademy.cz/dashboard/" class="dl-btn dl-btn-primary">
+											            Přejít na mé lekce        </a>
+											    </div>
+											</div>
+
+											- add Stripe live keys
+
+
+										[x] add admin tab for displaying invoices overview (developer-lessons plugin → Lessons → Invoices)
 
 
 
@@ -272,6 +282,38 @@ Na kovárně 461/10
 101 00 Praha 10
 
 a čas je 11:00 - 17:00
+
+					Here you will find everything you need to know about our online video library. If you still have any questions, please do not hesitate to contact us.
+
+					1. How many lessons can I purchase and what are the options?
+					   We have prepared a set of 10 thoughtfully designed videos for you. You have complete freedom to create your own training plan:
+					   1 video may be the ideal choice if you are looking for a specific focus or want to have one precisely structured lesson at hand, which you can master perfectly through repetition.
+					   The 5-video package is the perfect middle ground for those of you who enjoy variety. Alternating between five different lessons ensures that your muscles continuously receive new stimuli and that your workouts never become boring.
+					   The complete set of 10 videos = your personal barre library. You will gain a comprehensive training system, maximum inspiration, and the ability to choose a lesson based exactly on the energy and time you have on any given day. Plus, it comes at the best possible price.
+
+					2. How long will I have access to the videos?
+					   We believe in sustainability and freedom in movement. Once you purchase a video (or a package), it remains available to you forever. Exercise whenever it suits you – whether that is today or a year from now.
+
+					3. Who are the videos intended for? Are they also suitable for instructors?
+					   Our videos are a bridge between the studio and your home. They are designed for clients who love our style but are currently unable to attend in person – whether you are out of town, on vacation, or caring for children at home. At the same time, thanks to the high level of expertise of our instructors, they are also an excellent source of inspiration for other instructors looking for new exercise variations and precise lesson-guidance methodology.
+
+					4. What equipment will I need for the workouts?
+					   In our library, you will find a variety of lessons. We offer options:
+					   Completely without equipment, using only your body weight, which you can do anywhere.
+					   With equipment to deepen the experience and increase the intensity. We use overballs, dumbbells (including ergonomic ones), resistance bands (latex and fabric) or Therabands, yoga blocks, ankle weights, or sliders.
+
+					Tip: In the description of each video, you will find an exact list of the equipment used by the instructor.
+
+					5. What about music and playlists?
+					   Atmosphere is essential to us. For every video, we have created a special playlist for you on Spotify. You will find the link directly with the lesson.
+					   Sometimes the music may not cover the entire length of the video, or there may be silence during certain parts of the lesson. This is intentional – in specific sections, we want you to focus fully on your breathing and the instructor’s guidance. Silence during these moments deepens concentration on proper technique, which is the top priority at Barre Academy.
+
+					6. On which devices can I watch the videos?
+					   Our website is fully responsive. For the best workout experience, we recommend using a laptop or tablet so you can clearly see the exercise details. However, you can also stream the lessons without any issues on your smartphone. All you need is a stable internet connection and some space for yourself.
+
+					7. What if I am not satisfied with the purchased video?
+					   At Barre Academy, we pride ourselves on the top-quality experience you enjoy daily in our studio. Since this is a digital product, once payment has been made and the video has been made accessible (played), it is no longer possible to claim a refund under applicable legislation and our terms and conditions. However, we are confident that thanks to the professionalism of our instructors and the quality of production, you will love every minute of your workout.
+
 				Často kladené otázky (FAQ) – Barre Academy Online
 
 				Zde najdete vše, co potřebujete vědět o našem online video archivu. Pokud by vám přesto něco chybělo, neváhejte nás kontaktovat.
