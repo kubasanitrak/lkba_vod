@@ -6,7 +6,7 @@
         gap: var(--gap);
         flex-direction: column;
         @include mq(mq-land) {
-            flex-direction: row;
+            // flex-direction: row;
         }
         .dl-payment-method {
             input[type="radio"] {}
