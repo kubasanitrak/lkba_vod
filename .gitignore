@@ -1,4 +1,5 @@
 .DS_Store
 *.css.map
 _TODO
-assets/fonts/*
+assets/fonts
+_wp-snippets.php
