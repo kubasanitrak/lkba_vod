@@ -44,7 +44,7 @@
 		@media screen and (min-aspect-ratio: 2/1)  { @content; }
 	}
 	@else if $point == mq-BREAK-P {
-		@media screen and (min-width: $max-W)  { @content; }
+		@media screen and (min-width: calc(#{$max-W} * 1.1))  { @content; }
 	}
 	@else if $point == mq-iPad-land {
 		@media only screen and (min-device-width: 810px) and (max-device-width: 1080px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {  @content; }

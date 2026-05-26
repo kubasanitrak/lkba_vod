@@ -107,8 +107,8 @@ body {
 	@include mq(mq-BREAK-P) {
 		// width: $max-W;
 		width: auto;
-		left: calc( (100% - #{$max-W}  - (var(--pad-R) * 2)) / 2 );
-		right: calc( (100% - #{$max-W}  - (var(--pad-R) * 2)) / 2 );
+		left: calc( (100% - (#{$max-W} * 1.0)  - (var(--pad-R) * 2)) / 2 );
+		right: calc( (100% - (#{$max-W} * 1.0)  - (var(--pad-R) * 2)) / 2 );
 	}
 }
 .content-container {
