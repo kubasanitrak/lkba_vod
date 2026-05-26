@@ -109,6 +109,7 @@
 		li a {
 			display: block;
 			height: calc(var(--touch-S) * .9);
+			line-height: calc(var(--touch-S) * .9);
 		}
 
 		@include mq(mq-land-L-UP) {
