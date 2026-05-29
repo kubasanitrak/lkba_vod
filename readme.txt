@@ -1,18 +1,25 @@
-=== lkba_vod ===
-Contributors: kubaS
-Requires at least: 6.0
-Tested up to: 6.8
-Requires PHP: 7.4
-Stable tag: 0.1.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+IMPORTANT - PLEASE READ: http://tidythemes.com/concept/
 
-LKBA VOD WordPress theme for lesson pages, ACF blocks, and e-commerce UI styles.
+YOU MAY DELETE THIS FILE AND ANY OTHER FILE(S) BEFORE STARTING YOUR PROJECT
 
-== Development ==
+If you're creating your own theme/client project open up all files and do a "Find and Replace All in All Files" on the word "delicode" with your own slug/prefix.
 
-Compile SCSS after style changes:
+- - THEME - -
 
-  sass assets/scss/style.scss:assets/css/style.css --style=compressed
-  sass assets/scss/public.scss:assets/css/public.css --style=compressed
-  sass assets/scss/wp-block-fix-style.scss:assets/css/wp-block-fix-style.css --style=compressed
+- - DESCRIPTION - -
+
+This theme is aimed at web pros, but is of course available and supported for anyone.
+
+The bare essentials of a WordPress theme, no visual CSS styles added except for the CSS reset and the mandatory WP classes. Perfect for those who would like to build their own theme completely from scratch.
+
+One custom menu and one widgetized sidebar to get you started.
+
+- - COPYRIGHT & LICENSE - -
+
+In its unchanged/original state, Delicode is...
+
+© 2011-2017 TidyThemes
+GNU General Public License | https://www.gnu.org/licenses/gpl.html
+
+...however, once you've significantly changed the theme to build your own unique
+project, either for yourself or for a client under a different theme name (as is encouraged) you're entirely welcome to copyright and license that project as you see fit.
