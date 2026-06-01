@@ -7,7 +7,7 @@
 
 function lkba_vod_asset_version( $relative_path ) {
 	$path = get_template_directory() . $relative_path;
-	return file_exists( $path ) ? (string) filemtime( $path ) : '1.0.8';
+	return file_exists( $path ) ? (string) filemtime( $path ) : '1.1.0';
 }
 
 function lkba_vod_enqueue_frontend_assets() {
