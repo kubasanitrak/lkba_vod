@@ -45,3 +45,9 @@ msgstr "Login"
 
 msgid "Reset password"
 msgstr "Reset password"
+
+msgid "Register"
+msgstr "Register for free"
+
+msgid "Register for free"
+msgstr "Register for free"

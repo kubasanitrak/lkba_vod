@@ -41,7 +41,13 @@ msgid "Logout"
 msgstr "Odhlásit"
 
 msgid "Login"
-msgstr "Přilásit"
+msgstr "Přihlásit"
 
 msgid "Reset password"
 msgstr "Resetovat heslo"
+
+msgid "Register"
+msgstr "Registrace zdarma"
+
+msgid "Register for free"
+msgstr "Registrace zdarma"

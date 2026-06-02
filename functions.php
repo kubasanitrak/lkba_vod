@@ -195,17 +195,28 @@ function lkba_login_logout_shortcode() {
 		$text = __( 'Login', 'lkba_vod' );
 	}
 
-	return '<div class="wp-block-button is-style-outline button"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $link ) . '">' . esc_html( $text ) . '</a></div>';
+	return '<div class="wp-block-button is-style-filled button"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $link ) . '">' . esc_html( $text ) . '</a></div>';
 }
 add_shortcode( 'login_logout_link', 'lkba_login_logout_shortcode' );
+
+function lkba_login_shortcode() {
+	if ( is_user_logged_in() ) {
+		return '';
+	} 
+	$link = wp_login_url( get_permalink() );
+	$text = __( 'Login', 'lkba_vod' );
+
+	return '<div class="wp-block-button is-style-filled button"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $link ) . '">' . esc_html( $text ) . '</a></div>';
+}
+add_shortcode( 'login_link', 'lkba_login_shortcode' );
 
 function lkba_register_shortcode() {
 	if ( is_user_logged_in() ) {
 		return '';
 	}
 
-	$link = home_url( '/register/' );
-	$text = __( 'Register', 'lkba_vod' );
+	$link = home_url( '/zaregistrujte-se/' );
+	$text = __( 'Register for free', 'lkba_vod' );
 
 	return '<div class="wp-block-button is-style-outline button"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $link ) . '">' . esc_html( $text ) . '</a></div>';
 }
@@ -219,7 +230,7 @@ function lkba_password_shortcode() {
 	$link = home_url( '/nastavte-si-heslo/' );
 	$text = __( 'Reset password', 'lkba_vod' );
 
-	return '<div class="wp-block-button is-style-filled button"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $link ) . '">' . esc_html( $text ) . '</a></div>';
+	return '<div class="wp-block-button is-style-outline button"><a class="wp-block-button__link wp-element-button" href="' . esc_url( $link ) . '">' . esc_html( $text ) . '</a></div>';
 }
 add_shortcode( 'password_link', 'lkba_password_shortcode' );
 

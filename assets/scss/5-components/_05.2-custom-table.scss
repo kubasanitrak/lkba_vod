@@ -1,7 +1,9 @@
 .customtable {
-	margin-top: calc(var(--pad-T) * 3.0);
-	@include mq(mq-land) {
-		margin-top: var(--pad-T);
+	&:not(.dl-my-lessons-overview) {
+		margin-top: calc(var(--pad-T) * 3.0);
+		@include mq(mq-land) {
+			margin-top: var(--pad-T);
+		}
 	}
 	&-header,
 	&-row {
@@ -91,7 +93,7 @@
 			}
 		}
 	}
-	&:not(:first-of-type),
+	&:not(:first-of-type):not(.dl-my-lessons-overview),
 	&.bor-T {
 		border-top: $line-THICK solid var(--LKBA-cream-dark);
 	}

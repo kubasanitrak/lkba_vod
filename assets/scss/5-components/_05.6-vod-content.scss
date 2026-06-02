@@ -324,7 +324,9 @@
     background-color: transparent;
 }
 .grid-item--title {
-    max-width: 28ch;
+    &:not(.customtable-col--item) {
+        max-width: 28ch;
+    }
     text-wrap: pretty;
 }
 .grid-item--btn {
