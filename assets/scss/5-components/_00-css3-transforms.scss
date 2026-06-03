@@ -89,7 +89,7 @@
 .nav-switch:checked ~ .menu {
 	padding-top: calc( var(--pad-T) * 1.1 );
 	cursor: pointer;
-	height: calc( (var(--touch-S) * 13) + ( var(--pad-T) * 2 ) ); //10 = NUMBER OF .menu > li ITEMS
+	height: calc( (var(--touch-S) * 8) + ( var(--pad-T) * 2 ) ); //10 = NUMBER OF .menu > li ITEMS
 	background-color: var(--color-bg);
 	overflow: initial;
 
@@ -179,6 +179,11 @@
 		// transition: transform $global-transistion-duration 0.0s $cubic-2;
 		// transform: translate(0, 0);
 	}
+
+	.header {
+		opacity: 1;
+		transition: opacity $global-transistion-duration #{$dur}s ease-out;
+	}
 	
 	figure.lazyload,
 	picture.lazyload {
@@ -199,6 +204,9 @@
 		}
 	}
 	.loading {
+		.header {
+			opacity: 0;
+		}
 		.main-nav-list li,
 		.logo-container {
 			transform: translate($paralax-dist, 0);
