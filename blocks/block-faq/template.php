@@ -11,8 +11,10 @@
     // $ROUNDED_CORNERS = get_field('has_round_corners');
 
     $classes = ( ! empty( $block['className'] ) ) ? sprintf( $CLS_W . ' %s', $block['className'] ) : $CLS_W;
-    $block_id = $block['id'];
-   
+    $block_id = '';
+    if ( ! empty( $block['anchor'] ) ) :
+        $block_id = esc_attr( $block['anchor'] );
+    endif;
 ?>
 
 <div

@@ -23,9 +23,6 @@
 		[style*="--video-ratio"] > :first-child:not(.play-button) { position: absolute; top: 0; left: 0; height: 100%; }
 	}
 </style>
-<!--PrivateStater-Getter-->
-<!-- <script>window.PrivateStaterConfig = { prstSite: 'barreacademy' }</script>
-<script src="https://privatestater.com/privatestater.js"></script> -->
 </head>
 <body <?php body_class(); ?> data-theme="">
 <script>document.body.classList.add('js');</script>

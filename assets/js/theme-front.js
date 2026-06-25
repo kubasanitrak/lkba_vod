@@ -40,11 +40,14 @@
 	const preventDefaultLinks = document.querySelectorAll('.prevent-default');
 	const observedItems = document.querySelectorAll('.scroll-trigger');
 
-	function docLoaded() {
-		window.removeEventListener('load', docLoaded);
+	function revealPage() {
 		if (wrapper.classList.contains('loading')) {
 			wrapper.classList.remove('loading');
 		}
+	}
+
+	function initTheme() {
+		revealPage();
 		setupIntersectionObserver();
 		addMenuBtnListeners();
 		bindPreventDefaults();
@@ -128,5 +131,9 @@
 		wrapper.classList.add('is-desktop');
 	}
 
-	window.addEventListener('load', docLoaded);
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initTheme);
+	} else {
+		initTheme();
+	}
 })();

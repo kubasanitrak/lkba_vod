@@ -42,8 +42,6 @@ function lkba_vod_enqueue_frontend_assets() {
 		lkba_vod_asset_version( '/assets/css/wp-block-fix-style.css' )
 	);
 
-	wp_enqueue_style( 'dashicons' );
-
 	wp_enqueue_script(
 		'lkba-vod-lazysizes',
 		$theme_uri . '/assets/js/libs/lazysizes.min.js',
@@ -97,3 +95,18 @@ function lkba_vod_enqueue_editor_styles() {
 	);
 }
 add_action( 'admin_enqueue_scripts', 'lkba_vod_enqueue_editor_styles' );
+
+/**
+ * Load PrivateStater at end of body so it does not block initial render.
+ */
+function lkba_vod_print_privatestater() {
+	if ( is_admin() ) {
+		return;
+	}
+	?>
+	<!-- PrivateStater-Getter -->
+	<script>window.PrivateStaterConfig = { prstSite: 'barreacademy' };</script>
+	<script src="https://privatestater.com/privatestater.js" defer></script>
+	<?php
+}
+add_action( 'wp_footer', 'lkba_vod_print_privatestater', 5 );

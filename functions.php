@@ -253,3 +253,10 @@ function lkba_restrict_admin_access() {
 	}
 }
 add_action( 'init', 'lkba_restrict_admin_access' );
+
+/* TO STOP WORDPRESS FROM SENDING NEW USER REGISTRATION NOTIFICATIONS TO THE SITE ADMIN */
+add_filter( 'wp_new_user_notification_email_admin', 'stop_admin_registration_email', 10, 3 );
+function stop_admin_registration_email( $wp_new_user_notification_email_admin, $user, $blogname ) {
+    add_filter( 'pre_wp_mail', '__return_false' );
+    return $wp_new_user_notification_email_admin;
+}
